@@ -45,7 +45,6 @@ const getSingleContact = async (req, res) => {
   }
 };
 
-// We can add createContact, updateContact, deleteContact functions here later
 
 module.exports = {
   getAllContacts,

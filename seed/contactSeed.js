@@ -35,7 +35,7 @@ const seedContacts = async () => {
     const db = getDb();
     const contactsCollection = db.collection('contacts');
 
-    // Clear existing contacts before seeding.
+    
     console.log('Clearing existing contacts...');
     await contactsCollection.deleteMany({});
 
