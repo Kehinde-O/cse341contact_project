@@ -8,6 +8,8 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
+// Determine server URL based on environment
+const serverUrl = process.env.RENDER_EXTERNAL_URL || `http://localhost:${port}`;
 
 app.use(express.json());
 
@@ -21,7 +23,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: `http://localhost:${port}`,
+        url: serverUrl, // Use dynamic server URL
       },
     ],
   },
@@ -32,7 +34,7 @@ const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.get('/', (req, res) => {
-  res.send('Hello World');
+  res.send('CSE341 Contact API is running'); // Updated root path message
 });
 
 app.use('/', require('./routes/index'));
