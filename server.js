@@ -34,7 +34,7 @@ const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.get('/', (req, res) => {
-  res.send('CSE341 Contact API is running'); // Updated root path message
+  res.send('CSE341 Contact API is running');
 });
 
 app.use('/', require('./routes/index'));
