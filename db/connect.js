@@ -9,7 +9,7 @@ const connectDB = async (uri) => {
   }
   try {
     const client = await MongoClient.connect(uri);
-    _db = client.db(process.env.DATABASE_NAME); // Use DATABASE_NAME from .env
+    _db = client.db(process.env.DATABASE_NAME);
     return _db;
   } catch (err) {
     console.error('Error connecting to MongoDB:', err);

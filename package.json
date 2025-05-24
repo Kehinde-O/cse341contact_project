@@ -1,14 +1,16 @@
 {
   "name": "contact",
   "version": "1.0.0",
-  "description": "",
+  "description": "A RESTful API for managing contact information",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test-api.js",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "seed": "node seed/contactSeed.js",
+    "verify": "node verify-requirements.js"
   },
-  "keywords": [],
+  "keywords": ["contacts", "api", "mongodb", "express", "crud"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",

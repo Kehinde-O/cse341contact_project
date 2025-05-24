@@ -25,6 +25,20 @@ const sampleContacts = [
     favoriteColor: 'Red',
     birthday: '1992-09-10',
   },
+  {
+    firstName: 'Bob',
+    lastName: 'Wilson',
+    email: 'bob.wilson@example.com',
+    favoriteColor: 'Yellow',
+    birthday: '1988-07-03',
+  },
+  {
+    firstName: 'Sarah',
+    lastName: 'Davis',
+    email: 'sarah.davis@example.com',
+    favoriteColor: 'Purple',
+    birthday: '1993-12-28',
+  },
 ];
 
 const seedContacts = async () => {
@@ -35,7 +49,6 @@ const seedContacts = async () => {
     const db = getDb();
     const contactsCollection = db.collection('contacts');
 
-    
     console.log('Clearing existing contacts...');
     await contactsCollection.deleteMany({});
 
